@@ -1,0 +1,33 @@
+/* Custom styles for code elements */
+code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Better focus styles for accessibility */
+button:focus, 
+a:focus, 
+input:focus, 
+select:focus, 
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Custom animation for loading spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Make sure modals are properly centered on mobile */
+@media (max-width: 640px) {
+  .fixed.inset-0.flex.items-center.justify-center > div {
+    margin: 0 1rem;
+    max-width: calc(100% - 2rem);
+  }
+}
