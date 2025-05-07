@@ -1,8 +1,22 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
 /* Custom styles for code elements */
 code {
   white-space: pre-wrap;
   word-break: break-word;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
 }
 
 /* Better focus styles for accessibility */
@@ -24,10 +38,105 @@ textarea:focus {
   animation: spin 1s linear infinite;
 }
 
-/* Make sure modals are properly centered on mobile */
-@media (max-width: 640px) {
-  .fixed.inset-0.flex.items-center.justify-center > div {
-    margin: 0 1rem;
-    max-width: calc(100% - 2rem);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
+  
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Reduce padding on mobile */
+  .p-8 {
+    padding: 1.5rem !important;
+  }
+  
+  .p-6 {
+    padding: 1.25rem !important;
+  }
+  
+  /* Make buttons more touch-friendly */
+  button, a.button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Specifically for small mobile screens */
+@media (max-width: 480px) {
+  /* Ensure modals are properly sized and centered */
+  .fixed.inset-0.flex.items-center.justify-center > div {
+    width: 90% !important;
+    max-width: 90% !important;
+    margin: 0 auto;
+  }
+  
+  /* Further reduce text size */
+  .text-xs {
+    font-size: 0.7rem !important;
+  }
+  
+  .text-sm {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Make scrolling smoother */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transition effects */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Fix for overflow issues */
+.overflow-x-auto {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Animation for fade in effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in forwards;
+}
+
+/* Better scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
 }

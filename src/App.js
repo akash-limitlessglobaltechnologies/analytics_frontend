@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-100">
         <Navbar />
-        <div className="pt-16 pb-8 px-4 md:px-0"> {/* Add padding for fixed navbar */}
+        <div className="pt-16 md:pt-20"> {/* Adjusted padding for fixed navbar */}
           <Routes>
             <Route path="/" element={<Navigate to="/feedback" replace />} />
             <Route path="/feedback" element={<Feedback />} />
