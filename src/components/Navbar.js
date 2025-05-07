@@ -26,8 +26,8 @@ function Navbar() {
               </svg>
             </div>
             <div className="flex flex-col">
-              <span className="text-lg md:text-xl font-bold text-white">Feedback Hub</span>
-              <span className="text-xs text-gray-400 hidden sm:inline">Collect and manage feedback</span>
+              <span className="text-lg md:text-xl font-bold text-white">Dashboard</span>
+              
             </div>
           </Link>
           
